@@ -1,3 +1,4 @@
+// var
 let buttonColours = ["red", "blue", "green", "yellow"];
 let gamePattern = [];
 let userClickedPattern = [];
@@ -28,10 +29,12 @@ $(".btn").on("click", function() {
 });
 
 function checkAnswer(currentLevel) {
+  // check each button clicked
   if(userClickedPattern[currentLevel] === gamePattern[currentLevel]) {
 
     console.log("success");
 
+    // check when level finished and call next level
     if(userClickedPattern.length === gamePattern.length) {
       setTimeout(function(){
         newSequence();
